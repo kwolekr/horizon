@@ -1,0 +1,14 @@
+################################
+# horizon atmosphere file
+#
+# channel name,
+# richedit picture,
+# listview picture,
+# static label picture
+#
+################################
+
+Channel Name
+path\to\file\rtb_image.bmp
+path\to\file\lvw_image.bmp
+path\to\file\lbl_image.bmp

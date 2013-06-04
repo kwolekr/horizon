@@ -1,0 +1,573 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+#define IDC_STATIC -1
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENUBOT MENU DISCARDABLE 
+BEGIN
+    POPUP "Bot"
+    BEGIN
+        MENUITEM "Connect",                     ID_BOT_CONNECT
+        MENUITEM "Disconnect",                  ID_BOT_DISCONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "Unload Bot",                  ID_BOT_UNLOADBOT
+    END
+    MENUITEM "Stats",                       65535
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "rc/pics.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "rc/icons.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "rc/cfgicons.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "rc/horizon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIG DIALOG DISCARDABLE  0, 0, 477, 223
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configuration"
+FONT 8, "Segoe UI"
+BEGIN
+    DEFPUSHBUTTON   "OK",CONFIG_CMDOK,420,205,50,14
+    PUSHBUTTON      "Cancel",CONFIG_CMDCANCEL,85,205,50,14
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,80,0,395,200
+    LISTBOX         CONFIG_LSTPROFILES,5,15,70,185,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Profiles",IDC_STATIC,5,5,70,10
+END
+
+IDD_CONFIGPAGE0 DIALOG DISCARDABLE  0, 0, 386, 182
+STYLE WS_CHILD
+FONT 8, "Segoe UI"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,0,0,385,180
+    LTEXT           "Username",IDC_STATIC,10,15,35,10
+    EDITTEXT        CONFIG_TXTUSER,65,15,80,10,ES_AUTOHSCROLL
+    LTEXT           "Password",IDC_STATIC,10,30,40,10
+    EDITTEXT        CONFIG_TXTPASS,65,30,80,10,ES_AUTOHSCROLL
+    LTEXT           "BNCS",IDC_STATIC,160,15,25,10
+    COMBOBOX        CONFIG_CBOSERVER,195,15,110,120,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Regular",IDC_STATIC,160,60,30,10
+    COMBOBOX        CONFIG_CBOCDKEY,195,60,110,120,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        CONFIG_CBOCLIENT,65,45,45,120,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Client",IDC_STATIC,10,45,25,10
+    GROUPBOX        "CDKeys",IDC_STATIC,155,50,155,40
+    LTEXT           "Expansion",IDC_STATIC,160,75,35,10
+    EDITTEXT        CONFIG_TXTEXPKEY,195,75,110,10,ES_AUTOHSCROLL
+    LTEXT           "Home Channel",IDC_STATIC,10,60,50,10
+    EDITTEXT        CONFIG_TXTHOME,65,60,80,10,ES_AUTOHSCROLL
+    GROUPBOX        "CheckRevision",IDC_STATIC,220,95,90,50
+    CONTROL         "BNLS",CONFIG_CRBNLS,"Button",BS_AUTORADIOBUTTON,225,125,
+                    30,8
+    CONTROL         "External DLL hashing",CONFIG_CREXTERNALHASHING,"Button",
+                    BS_AUTORADIOBUTTON,225,115,80,8
+    CONTROL         "Local Hashing",CONFIG_CRLOCALHASHING,"Button",
+                    BS_AUTORADIOBUTTON,225,105,60,8
+    CONTROL         "Skip (PvPGN)",CONFIG_CRSKIP,"Button",BS_AUTORADIOBUTTON,
+                    225,135,55,8
+    GROUPBOX        "Server",IDC_STATIC,155,5,155,40
+    COMBOBOX        CONFIG_CBOBNLSSERVER,195,30,110,120,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "BNLS",IDC_STATIC,160,30,20,10
+    GROUPBOX        "General",IDC_STATIC,5,5,145,70
+    GROUPBOX        "Ping",IDC_STATIC,315,5,65,85
+    CONTROL         "-1 Ping",CONFIG_PINGNEG1,"Button",BS_AUTORADIOBUTTON,
+                    320,15,50,8
+    CONTROL         "0 Ping",CONFIG_PING0,"Button",BS_AUTORADIOBUTTON,320,25,
+                    50,8
+    CONTROL         "Normal Ping",CONFIG_PINGNORMAL,"Button",
+                    BS_AUTORADIOBUTTON,320,35,55,8
+    CONTROL         "Custom Ping",CONFIG_PINGCUSTOM,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY,320,45,55,8
+    EDITTEXT        CONFIG_TXTPINGCUSTOMVAL,330,55,45,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Use Plug?",CONFIG_CHKPLUG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,320,70,55,8
+END
+
+IDD_PROFILE DIALOG DISCARDABLE  0, 0, 337, 159
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Profile"
+FONT 8, "Segoe UI"
+BEGIN
+    DEFPUSHBUTTON   "OK",PROFILE_CMDOK,5,120,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",PROFILE_CMDCANCEL,5,140,50,14
+    LTEXT           "",PROFILE_LBLUSERNAME,60,5,275,15
+    EDITTEXT        PROFILE_TXTSEX,65,30,265,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER
+    EDITTEXT        PROFILE_TXTLOCATION,65,45,265,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER
+    EDITTEXT        PROFILE_TXTDESCRIPTION,65,60,265,95,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | NOT WS_BORDER
+    LTEXT           "Sex",IDC_STATIC,5,30,15,10
+    LTEXT           "Location",IDC_STATIC,5,45,30,10
+    LTEXT           "Description",IDC_STATIC,5,60,40,10
+END
+
+IDD_CONFIGPAGE1 DIALOG DISCARDABLE  0, 0, 386, 182
+STYLE WS_CHILD
+FONT 8, "Segoe UI"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,0,0,385,180
+    LTEXT           "CDKey Owner",IDC_STATIC,5,10,50,10
+    GROUPBOX        "Locale Info",IDC_STATIC,155,10,160,45
+    LTEXT           "Country Name",IDC_STATIC,160,20,50,10
+    LTEXT           "Country Abbriviation",IDC_STATIC,160,35,70,10
+    EDITTEXT        CONFIG_TXTCOUNTRYABBRIV,235,35,75,10,ES_AUTOHSCROLL
+    EDITTEXT        CONFIG_TXTCOUNTRYNAME,215,20,95,10,ES_AUTOHSCROLL
+    EDITTEXT        CONFIG_TXTCDKEYOWNER,55,10,75,10,ES_AUTOHSCROLL
+    GROUPBOX        "Verbytes",IDC_STATIC,320,10,60,70
+    EDITTEXT        CONFIG_TXTVERBYTESTAR,355,20,20,10,ES_AUTOHSCROLL
+    EDITTEXT        CONFIG_TXTVERBYTEWAR3,355,35,20,10,ES_AUTOHSCROLL
+    EDITTEXT        CONFIG_TXTVERBYTED2DV,355,50,20,10,ES_AUTOHSCROLL
+    EDITTEXT        CONFIG_TXTVERBYTEW2BN,355,65,20,10,ES_AUTOHSCROLL
+    LTEXT           "STAR   0x",IDC_STATIC,325,20,30,10
+    LTEXT           "WAR3 0x",IDC_STATIC,325,35,30,10
+    LTEXT           "D2DV 0x",IDC_STATIC,325,50,30,10
+    LTEXT           "W2BN 0x",IDC_STATIC,325,65,30,10
+    GROUPBOX        "Proxy",IDC_STATIC,155,60,160,35
+    CONTROL         "Use proxy?",CONFIG_CHKPROXY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,160,70,50,8
+    COMBOBOX        CONFIG_CBOPROXY,160,80,150,120,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Force create accounts?",CONFIG_CHKFORCECREATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,40,85,10
+    GROUPBOX        "Email Registration",IDC_STATIC,5,105,140,55
+    CONTROL         "Automatically register new accounts",CONFIG_CHKAUTOREG,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,115,130,10
+    EDITTEXT        CONFIG_TXTEMAIL1,10,135,130,10,ES_AUTOHSCROLL
+    CONTROL         "Register Back/Change Email",CONFIG_CHKREGBACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,125,120,8
+    EDITTEXT        CONFIG_TXTEMAIL2,10,145,130,10,ES_AUTOHSCROLL
+    LTEXT           "Platform",IDC_STATIC,5,25,40,10
+    COMBOBOX        CONFIG_CBOPLATFORM,55,25,45,120,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Password",IDC_STATIC,5,50,140,50
+    CONTROL         "Change Password?",CONFIG_CHKCHANGEPASS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,60,75,10
+    EDITTEXT        CONFIG_TXTNEWPASS,10,85,130,10,ES_AUTOHSCROLL
+    LTEXT           "New Password",IDC_STATIC,10,75,60,10
+END
+
+IDD_CONFIGPAGE2 DIALOG DISCARDABLE  0, 0, 386, 182
+STYLE WS_CHILD
+FONT 8, "Segoe UI"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,0,0,385,180
+    COMBOBOX        CONFIG_CBOFONT,55,20,125,120,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Font",IDC_STATIC,5,10,180,50
+    LTEXT           "Face Name",IDC_STATIC,10,20,40,10
+    LTEXT           "Size",IDC_STATIC,10,35,25,10
+    EDITTEXT        CONFIG_TXTFONTSIZE,55,35,20,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Sample Text",CONFIG_LBLFONT,85,40,95,15,SS_CENTERIMAGE
+    GROUPBOX        "Auto Clear",IDC_STATIC,190,10,95,50
+    CONTROL         "Clear RTB?",CONFIG_CHKCLEARRTB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,195,20,50,10
+    GROUPBOX        "Images",IDC_STATIC,290,10,90,100
+    LTEXT           "Max RTB Len",IDC_STATIC,195,30,45,10
+    LTEXT           "Chars to clear",IDC_STATIC,195,45,45,10
+    EDITTEXT        CONFIG_TXTMAXRTBLEN,245,30,35,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        CONFIG_TXTCHARSTOCLEAR,245,45,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Use?",CONFIG_CHKUSERTBIMG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,300,40,30,8
+    GROUPBOX        "RTB",IDC_STATIC,295,30,80,35
+    PUSHBUTTON      "Select picture...",CONFIG_CMDRTBSELIMG,300,50,70,10
+    CONTROL         "Resizable ListView/Edit?",CONFIG_CHKMERGELVRTB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,190,105,95,8
+    CONTROL         "Gradient?",CONFIG_CHKGRADIENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,75,50,8
+    CONTROL         "application?",CONFIG_CHKWARNEXIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,195,75,55,8
+    CONTROL         "profile?",CONFIG_CHKWARNPROFILE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,195,85,40,8
+    CONTROL         "Use text instead of lag bars?",CONFIG_CHKTEXTPING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,190,115,105,8
+    CONTROL         "Use Atmosphere?",CONFIG_CHKUSEATMOS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,295,20,75,8
+    GROUPBOX        "LV",IDC_STATIC,295,70,80,35
+    PUSHBUTTON      "Select picture...",CONFIG_CMDLVSELIMG,300,90,70,10
+    CONTROL         "Use?",CONFIG_CHKUSELVIMG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,300,80,30,10
+    COMBOBOX        CONFIG_CBOTABPOS,300,125,75,50,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Tab Position",IDC_STATIC,300,115,40,8
+    GROUPBOX        "Warn before closing...",IDC_STATIC,190,65,95,35
+    CONTROL         "",CONFIG_LBLCLR2,"Static",SS_LEFTNOWORDWRAP | SS_NOTIFY | 
+                    SS_SUNKEN | WS_GROUP,160,75,20,15
+    LTEXT           "",CONFIG_LBLCLR1,75,75,20,15,SS_NOTIFY | SS_SUNKEN
+    LTEXT           "-- gradient to -->",IDC_STATIC,100,80,60,10
+    GROUPBOX        "LV ToolTip/Channel Label GDI Fill",IDC_STATIC,5,65,180,
+                    65
+    CONTROL         "Solid",CONFIG_BRSHHATCH0,"Button",BS_AUTORADIOBUTTON,10,
+                    85,30,8
+    CONTROL         "HS_BDIAGONAL",CONFIG_BRSHHATCH5,"Button",
+                    BS_AUTORADIOBUTTON,75,105,75,8
+    CONTROL         "HS_CROSS",CONFIG_BRSHHATCH1,"Button",BS_AUTORADIOBUTTON,
+                    10,95,50,8
+    CONTROL         "HS_DIAGCROSS",CONFIG_BRSHHATCH2,"Button",
+                    BS_AUTORADIOBUTTON,10,105,65,8
+    CONTROL         "HS_FDIAGONAL",CONFIG_BRSHHATCH4,"Button",
+                    BS_AUTORADIOBUTTON,75,95,70,8
+    CONTROL         "HS_VERTICAL",CONFIG_BRSHHATCH3,"Button",
+                    BS_AUTORADIOBUTTON,10,115,60,8
+    CONTROL         "HS_HORIZONTAL",CONFIG_BRSHHATCH6,"Button",
+                    BS_AUTORADIOBUTTON,75,115,70,10
+    CONTROL         "Slider1",CONFIG_SLDGLASS,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,10,
+                    160,100,8
+    GROUPBOX        "Psuedotransparency",IDC_STATIC,5,135,105,35
+    CONTROL         "Enabled",CONFIG_CHKUSEGLASS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,145,75,10
+END
+
+IDD_CONFIGPAGE3 DIALOG DISCARDABLE  0, 0, 386, 182
+STYLE WS_CHILD
+FONT 8, "Segoe UI"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,0,0,385,180
+    GROUPBOX        "Greets",IDC_STATIC,5,5,210,170
+    GROUPBOX        "Idles",IDC_STATIC,220,5,160,170
+    GROUPBOX        "Join Greet",IDC_STATIC,10,15,200,75
+    GROUPBOX        "Leave Greet",IDC_STATIC,10,95,200,75
+    GROUPBOX        "Type",IDC_STATIC,225,15,50,50
+    CONTROL         "MP3",CONFIG_OPTIDLEMP3,"Button",BS_AUTORADIOBUTTON,230,
+                    35,35,8
+    CONTROL         "Uptime",CONFIG_OPTIDLEUPTIME,"Button",
+                    BS_AUTORADIOBUTTON,230,45,40,8
+    CONTROL         "Message",CONFIG_OPTIDLEMSG,"Button",BS_AUTORADIOBUTTON,
+                    230,55,40,8
+    EDITTEXT        CONFIG_TXTIDLEINTERVAL,340,20,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Interval (minutes)",IDC_STATIC,280,20,60,10
+    EDITTEXT        CONFIG_TXTIDLE,225,70,150,40,ES_AUTOHSCROLL
+    EDITTEXT        CONFIG_TXTJOINGREET,15,45,190,40,ES_AUTOHSCROLL
+    EDITTEXT        CONFIG_TXTLEAVEGREET,15,125,190,40,ES_AUTOHSCROLL
+    CONTROL         "Use?",CONFIG_CHKUSEJOINGREET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,20,30,30,10
+    CONTROL         "Use?",CONFIG_CHKUSELEAVEGREET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,20,110,35,10
+    CONTROL         "None",CONFIG_OPTIDLENONE,"Button",BS_AUTORADIOBUTTON,
+                    230,25,33,10
+END
+
+IDD_CONFIGPAGE4 DIALOG DISCARDABLE  0, 0, 386, 182
+STYLE WS_CHILD
+FONT 8, "Segoe UI"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,0,0,385,180
+    GROUPBOX        "Antiflood",IDC_STATIC,5,70,90,60
+    GROUPBOX        "Flood Protection",IDC_STATIC,225,10,85,45
+    CONTROL         "Show void userlist",CONFIG_CHKSHOWVOID,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,100,90,75,8
+    CONTROL         "Show account info on logon",CONFIG_CHKSHOWINFO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,100,80,105,8
+    CONTROL         "Join public channel on logon",CONFIG_CHKJOINPUBCHAN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,70,110,8
+    CONTROL         "URL hyperlink detection",CONFIG_CHKURLDETECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,225,90,95,8
+    CONTROL         "Log Chat",CONFIG_CHKLOGCHAT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,100,45,8
+    CONTROL         "Use?",CONFIG_CHKUSEANTIFLOOD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,80,40,8
+    LTEXT           "Per packet",IDC_STATIC,15,100,35,8
+    EDITTEXT        CONFIG_TXTPERPACKET,55,100,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    GROUPBOX        "Delays (ms)",IDC_STATIC,10,90,80,35
+    LTEXT           "Per byte",IDC_STATIC,15,110,30,8
+    EDITTEXT        CONFIG_TXTPERBYTE,55,110,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Use?",CONFIG_CHKUSEFLOODPROTECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,230,20,30,8
+    CONTROL         "Filter #s higher than",CONFIG_CHKFILTERNUMS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,230,30,80,8
+    EDITTEXT        CONFIG_TXTNUMFILTER,230,40,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    GROUPBOX        "Hash paths",IDC_STATIC,315,10,65,40
+    PUSHBUTTON      "Select path",CONFIG_CMDSELECTHASHPATH,320,35,55,10
+    COMBOBOX        CONFIG_CBOCLIENTS2,320,20,55,120,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Formatted logs",CONFIG_CHKFORMATLOGS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,100,110,65,8
+    CONTROL         "DL && extract CR MPQ",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,225,70,85,8
+    CONTROL         "DL && extract patch if update",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,225,80,105,8
+    GROUPBOX        "CheckRevision DLL call",IDC_STATIC,5,10,215,55
+    EDITTEXT        IDC_EDIT1,60,50,75,10,ES_AUTOHSCROLL
+    CONTROL         "__stdcall",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,145,
+                    30,45,8
+    CONTROL         "__fastcall",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,145,
+                    40,45,8
+    CONTROL         "__cdecl",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,145,50,
+                    40,8
+    CONTROL         "Custom call?",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,20,60,8
+    LTEXT           "Paramstring",IDC_STATIC,10,50,40,10
+    GROUPBOX        "Calling convention",IDC_STATIC,140,20,75,40
+    LTEXT           "Library",IDC_STATIC,10,30,25,8
+    EDITTEXT        IDC_EDIT2,60,30,75,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,60,40,75,10,ES_AUTOHSCROLL
+    LTEXT           "Function",IDC_STATIC,10,40,30,10
+    LTEXT           "Reconnection attempt interval",IDC_STATIC,90,140,105,8
+    EDITTEXT        CONFIG_TXTRCRATE,195,140,45,10,ES_AUTOHSCROLL
+    GROUPBOX        "XR encryption",IDC_STATIC,5,135,75,40
+    EDITTEXT        CONFIG_TXTXRCHANNEL,45,145,30,10,ES_AUTOHSCROLL
+    EDITTEXT        CONFIG_TXTXRFACTOR,45,160,30,10,ES_AUTOHSCROLL
+    LTEXT           "Channel",IDC_STATIC,10,145,30,10
+    LTEXT           "Factor",IDC_STATIC,10,160,30,10
+    CONTROL         "Decrypt coded messages",CONFIG_CHKDECODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,225,100,95,8
+END
+
+IDD_CONFIGPAGE5 DIALOG DISCARDABLE  0, 0, 386, 182
+STYLE WS_CHILD
+FONT 8, "Segoe UI"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,0,0,385,180
+    LISTBOX         CONFIG_LSTTOLOAD,85,15,70,95,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Load On Startup",IDC_STATIC,80,5,155,125
+    LISTBOX         CONFIG_LSTOTHERPROFILES,160,15,70,95,
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New Profile",CONFIG_CMDNEWPROFILE,5,130,70,15,
+                    WS_DISABLED
+    PUSHBUTTON      "Delete Profile",CONFIG_CMDDELETEPROFILE,5,150,70,15
+    PUSHBUTTON      "Load Selected",CONFIG_CMDLOADPROFILE,5,10,70,15
+    PUSHBUTTON      "Unload Selected",CONFIG_CMDUNLOADPROFILE,5,30,70,15
+    PUSHBUTTON      "Open Profile Dir",CONFIG_CMDOPENPROFILEDIR,5,60,70,15
+    PUSHBUTTON      "<--- Add",CONFIG_CMDTOLOADSTARTUP,160,115,70,10
+    PUSHBUTTON      "Remove --->",CONFIG_CMDTONOTLOADSTARTUP,85,115,70,10
+    EDITTEXT        CONFIG_TXTNEWPROFILE,5,115,70,10,ES_AUTOHSCROLL
+    PUSHBUTTON      "Open Profile .ini",CONFIG_CMDOPENPROFILEINI,5,80,70,15
+END
+
+IDD_BOTS DIALOG DISCARDABLE  0, 0, 470, 170
+STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Profiles"
+FONT 8, "Segoe UI"
+BEGIN
+    CONTROL         "List1",BOTS_LVWDISPLAY,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | WS_BORDER | 
+                    WS_TABSTOP,0,0,470,160
+    PUSHBUTTON      "OK",BOTS_CMDOK,0,160,470,10
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 147, 79
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Horizon"
+FONT 8, "Segoe UI"
+BEGIN
+    DEFPUSHBUTTON   "OK",ABOUT_OK,50,60,50,14
+END
+
+IDD_CREATECLAN DIALOG DISCARDABLE  0, 0, 107, 204
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create Clan..."
+FONT 8, "Segoe UI"
+BEGIN
+    DEFPUSHBUTTON   "Create",CLAN_CMDCREATE,75,185,30,15
+    PUSHBUTTON      "Cancel",CLAN_CMDCANCEL,5,185,30,15
+    CONTROL         "List1",CLAN_LVWCANDIDATES,"SysListView32",LVS_LIST | 
+                    WS_BORDER | WS_TABSTOP,0,10,105,130
+    EDITTEXT        CLAN_TXTTAG,65,145,40,12,ES_AUTOHSCROLL
+    EDITTEXT        CLAN_TXTNAME,5,170,100,12,ES_AUTOHSCROLL
+    LTEXT           "Clan Tag",IDC_STATIC,5,145,30,10
+    LTEXT           "Clan Name",IDC_STATIC,5,160,40,10
+    PUSHBUTTON      "Check",CLAN_CMDCHECK,40,185,30,15
+    LTEXT           "",CLAN_LBLSTATUS,0,0,105,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 470
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_CONFIGPAGE0, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 379
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_PROFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_CONFIGPAGE1, DIALOG
+    BEGIN
+        RIGHTMARGIN, 379
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_CONFIGPAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 379
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_CONFIGPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 379
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_CONFIGPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 379
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_CONFIGPAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 379
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_BOTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 140
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_CREATECLAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 100
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      MOVEABLE PURE   "horizon.exe.manifest"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
